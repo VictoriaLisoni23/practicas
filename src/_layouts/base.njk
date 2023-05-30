@@ -1,0 +1,17 @@
+<!doctype html>
+<html {% if section %} data-current="{{ section }}"{% endif %} lang="en">
+
+	{% include "partials/head.njk" %}
+
+	<body>
+		{% include "partials/site-header.njk" %}
+		{% include "partials/drawer.njk" %}
+
+		<main>
+			{{ layoutContent | safe }}
+		</main>
+
+		{% include "partials/footer.njk" %}
+	</body>
+
+</html>
